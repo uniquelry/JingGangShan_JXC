@@ -1,4 +1,4 @@
-package com.uniquelry.jgs.utils;
+package com.uniquelry.jgs.util;
 
 /**
  * @Description  字符串工具类

@@ -28,7 +28,7 @@ import com.uniquelry.jgs.service.LogService;
 import com.uniquelry.jgs.service.MenuService;
 import com.uniquelry.jgs.service.RoleService;
 import com.uniquelry.jgs.service.UserService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 
 /**
  * @Description  当前登录用户控制器

@@ -30,9 +30,9 @@ import com.uniquelry.jgs.service.LogService;
 import com.uniquelry.jgs.service.SaleListGoodsService;
 import com.uniquelry.jgs.service.SaleListService;
 import com.uniquelry.jgs.service.UserService;
-import com.uniquelry.jgs.utils.DateUtils;
-import com.uniquelry.jgs.utils.MathUtils;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.DateUtils;
+import com.uniquelry.jgs.util.MathUtils;
+import com.uniquelry.jgs.util.StringUtils;
 
 /**
  * @Description  销售单Controller类

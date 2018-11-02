@@ -9,7 +9,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import com.uniquelry.jgs.utils.DateUtils;
+import com.uniquelry.jgs.util.DateUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -29,7 +29,7 @@ import com.uniquelry.jgs.service.LogService;
 import com.uniquelry.jgs.service.ReturnListGoodsService;
 import com.uniquelry.jgs.service.ReturnListService;
 import com.uniquelry.jgs.service.UserService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 
 /**
  * @Description  退货单Controller类

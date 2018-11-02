@@ -19,7 +19,7 @@ import com.uniquelry.jgs.service.CustomerReturnListGoodsService;
 import com.uniquelry.jgs.service.GoodsService;
 import com.uniquelry.jgs.service.LogService;
 import com.uniquelry.jgs.service.SaleListGoodsService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 
 /**
  * @Description  后台管理商品Controller

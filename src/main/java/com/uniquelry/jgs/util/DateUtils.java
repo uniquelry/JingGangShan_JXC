@@ -1,4 +1,4 @@
-package com.uniquelry.jgs.utils;
+package com.uniquelry.jgs.util;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

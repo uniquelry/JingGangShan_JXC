@@ -11,7 +11,7 @@
  Target Server Version : 50722
  File Encoding         : 65001
 
- Date: 23/10/2018 22:29:24
+ Date: 27/10/2018 21:47:52
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `t_customer`  (
   `address` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '地址',
   `remarks` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '客户表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '客户表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_customer
@@ -56,7 +56,7 @@ CREATE TABLE `t_customer_return_list`  (
   INDEX `FKl0ahdwa8slkocbfe57opembfx`(`customer_id`) USING BTREE,
   CONSTRAINT `FKd55ju83f0ntixagdvdrsmw10c` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKl0ahdwa8slkocbfe57opembfx` FOREIGN KEY (`customer_id`) REFERENCES `t_customer` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '客户退单表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '客户退单表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_customer_return_list_goods
@@ -79,7 +79,7 @@ CREATE TABLE `t_customer_return_list_goods`  (
   INDEX `FK4sm5si4swbj3gae46jfk441yx`(`type_id`) USING BTREE,
   CONSTRAINT `FK4sm5si4swbj3gae46jfk441yx` FOREIGN KEY (`type_id`) REFERENCES `t_goodstype` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKtqt67mbn96lxn8hvtl4piblhi` FOREIGN KEY (`customer_return_list_id`) REFERENCES `t_customer_return_list` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '客户退单商品表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '客户退单商品表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_damage_list
@@ -141,7 +141,7 @@ CREATE TABLE `t_goods`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `FKlxnna5ngumghp4f279mmbjtyo`(`type_id`) USING BTREE,
   CONSTRAINT `FKlxnna5ngumghp4f279mmbjtyo` FOREIGN KEY (`type_id`) REFERENCES `t_goodstype` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_goodstype
@@ -154,7 +154,7 @@ CREATE TABLE `t_goodstype`  (
   `state` int(11) NULL DEFAULT NULL COMMENT '节点类型：1 有子节点，0 无子节点',
   `p_id` int(11) NULL DEFAULT NULL COMMENT '父类别id',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 43 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品类别表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 52 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品类别表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_goodstype
@@ -181,7 +181,7 @@ CREATE TABLE `t_goodsunit`  (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品单位id',
   `name` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '商品单位名称',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品单位表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品单位表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_goodsunit
@@ -208,7 +208,7 @@ CREATE TABLE `t_log`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `FKbvn5yabu3vqwvtjoh32i9r4ip`(`user_id`) USING BTREE,
   CONSTRAINT `FKbvn5yabu3vqwvtjoh32i9r4ip` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 4285 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统日志表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4303 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统日志表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_log
@@ -963,6 +963,24 @@ INSERT INTO `t_log` VALUES (4281, '保存角色权限设置', '添加操作', '2
 INSERT INTO `t_log` VALUES (4282, '用户注销', '注销操作', '2018-10-23 22:24:58', 2);
 INSERT INTO `t_log` VALUES (4283, '用户登录', '登录操作', '2018-10-23 22:25:16', 2);
 INSERT INTO `t_log` VALUES (4284, '用户注销', '注销操作', '2018-10-23 22:25:38', 2);
+INSERT INTO `t_log` VALUES (4285, '用户登录', '登录操作', '2018-10-27 15:51:20', 1);
+INSERT INTO `t_log` VALUES (4286, '查询商品库存信息', '查询操作', '2018-10-27 15:51:22', 1);
+INSERT INTO `t_log` VALUES (4287, '用户登录', '登录操作', '2018-10-27 17:53:09', 1);
+INSERT INTO `t_log` VALUES (4288, '查询商品库存信息', '查询操作', '2018-10-27 17:53:11', 1);
+INSERT INTO `t_log` VALUES (4289, '用户注销', '注销操作', '2018-10-27 17:53:44', 1);
+INSERT INTO `t_log` VALUES (4290, '用户登录', '登录操作', '2018-10-27 17:58:34', 1);
+INSERT INTO `t_log` VALUES (4291, '查询商品库存信息', '查询操作', '2018-10-27 17:58:35', 1);
+INSERT INTO `t_log` VALUES (4292, '用户登录', '登录操作', '2018-10-27 21:09:35', 1);
+INSERT INTO `t_log` VALUES (4293, '查询商品库存信息', '查询操作', '2018-10-27 21:09:36', 1);
+INSERT INTO `t_log` VALUES (4294, '查询商品信息', '查询操作', '2018-10-27 21:11:17', 1);
+INSERT INTO `t_log` VALUES (4295, '查询商品信息', '查询操作', '2018-10-27 21:11:17', 1);
+INSERT INTO `t_log` VALUES (4296, '查询商品信息', '查询操作', '2018-10-27 21:13:03', 1);
+INSERT INTO `t_log` VALUES (4297, '查询商品信息', '查询操作', '2018-10-27 21:13:03', 1);
+INSERT INTO `t_log` VALUES (4298, '查询商品库存信息', '查询操作', '2018-10-27 21:13:22', 1);
+INSERT INTO `t_log` VALUES (4299, '查询商品信息', '查询操作', '2018-10-27 21:13:32', 1);
+INSERT INTO `t_log` VALUES (4300, '查询商品信息', '查询操作', '2018-10-27 21:13:32', 1);
+INSERT INTO `t_log` VALUES (4301, '查询商品信息', '查询操作', '2018-10-27 21:14:15', 1);
+INSERT INTO `t_log` VALUES (4302, '查询商品信息', '查询操作', '2018-10-27 21:14:15', 1);
 
 -- ----------------------------
 -- Table structure for t_menu
@@ -1077,7 +1095,7 @@ CREATE TABLE `t_purchase_list`  (
   INDEX `FK69s6eyxr4wwvsywe9hbthef1h`(`user_id`) USING BTREE,
   CONSTRAINT `FK5j2dev8b2b5d0l69nb8vtr4yb` FOREIGN KEY (`supplier_id`) REFERENCES `t_supplier` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FK69s6eyxr4wwvsywe9hbthef1h` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 39 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '进货单表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '进货单表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_purchase_list_goods
@@ -1100,7 +1118,7 @@ CREATE TABLE `t_purchase_list_goods`  (
   INDEX `FK83ikbi2x3epn49fwcco8jlfwu`(`type_id`) USING BTREE,
   CONSTRAINT `FK83ikbi2x3epn49fwcco8jlfwu` FOREIGN KEY (`type_id`) REFERENCES `t_goodstype` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKfvdvgcebqkkokyn0o00idqnpy` FOREIGN KEY (`purchase_list_id`) REFERENCES `t_purchase_list` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 55 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '进货单商品表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '进货单商品表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_return_list
@@ -1121,7 +1139,7 @@ CREATE TABLE `t_return_list`  (
   INDEX `FK904juw2v1hm2av0ig26gae9jb`(`user_id`) USING BTREE,
   CONSTRAINT `FK4qxjj8bvj2etne243xluni0vn` FOREIGN KEY (`supplier_id`) REFERENCES `t_supplier` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FK904juw2v1hm2av0ig26gae9jb` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '退货单表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '退货单表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_return_list_goods
@@ -1144,7 +1162,7 @@ CREATE TABLE `t_return_list_goods`  (
   INDEX `FKa1prpd96fcs0x2oe0omny9vio`(`type_id`) USING BTREE,
   CONSTRAINT `FKa1prpd96fcs0x2oe0omny9vio` FOREIGN KEY (`type_id`) REFERENCES `t_goodstype` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKemclu281vyvyk063c3foafq1w` FOREIGN KEY (`return_list_id`) REFERENCES `t_return_list` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '退货单商品表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '退货单商品表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_role
@@ -1292,7 +1310,7 @@ CREATE TABLE `t_sale_list`  (
   INDEX `FKox4qfs87eu3fvwdmrvelqhi8e`(`customer_id`) USING BTREE,
   CONSTRAINT `FK34bnujemrdqimbhg133enp8k8` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKox4qfs87eu3fvwdmrvelqhi8e` FOREIGN KEY (`customer_id`) REFERENCES `t_customer` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '销售单表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '销售单表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_sale_list_goods
@@ -1315,7 +1333,7 @@ CREATE TABLE `t_sale_list_goods`  (
   INDEX `FKn9i5p1d8f0gek5x7q45cq8ibw`(`type_id`) USING BTREE,
   CONSTRAINT `FK20ehd6ta9geyql4hxtdsnhbox` FOREIGN KEY (`sale_list_id`) REFERENCES `t_sale_list` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKn9i5p1d8f0gek5x7q45cq8ibw` FOREIGN KEY (`type_id`) REFERENCES `t_goodstype` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 48 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '销售单商品表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '销售单商品表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for t_supplier
@@ -1329,7 +1347,7 @@ CREATE TABLE `t_supplier`  (
   `address` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '地址',
   `remarks` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '供应商表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '供应商表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_supplier

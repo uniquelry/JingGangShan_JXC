@@ -25,7 +25,7 @@ import com.uniquelry.jgs.service.LogService;
 import com.uniquelry.jgs.service.RoleService;
 import com.uniquelry.jgs.service.UserRoleService;
 import com.uniquelry.jgs.service.UserService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 
 /**
  * @Description  后台管理用户Controller
@@ -173,7 +173,6 @@ public class UserAdminController {
 	/**
 	 * 删除用户信息
 	 * @param id
-	 * @param response
 	 * @return
 	 * @throws Exception
 	 */

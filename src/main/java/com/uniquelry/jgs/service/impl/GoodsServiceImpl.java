@@ -3,7 +3,7 @@ package com.uniquelry.jgs.service.impl;
 import com.uniquelry.jgs.entity.Goods;
 import com.uniquelry.jgs.repository.GoodsRepository;
 import com.uniquelry.jgs.service.GoodsService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

@@ -4,7 +4,7 @@ import com.uniquelry.jgs.entity.Log;
 import com.uniquelry.jgs.repository.LogRepository;
 import com.uniquelry.jgs.repository.UserRepository;
 import com.uniquelry.jgs.service.LogService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

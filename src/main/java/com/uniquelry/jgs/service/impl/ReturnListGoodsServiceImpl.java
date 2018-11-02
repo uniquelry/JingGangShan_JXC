@@ -3,7 +3,7 @@ package com.uniquelry.jgs.service.impl;
 import com.uniquelry.jgs.entity.ReturnListGoods;
 import com.uniquelry.jgs.repository.ReturnListGoodsRepository;
 import com.uniquelry.jgs.service.ReturnListGoodsService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 

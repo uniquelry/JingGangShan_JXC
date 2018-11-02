@@ -3,7 +3,7 @@ package com.uniquelry.jgs.service.impl;
 import com.uniquelry.jgs.entity.Role;
 import com.uniquelry.jgs.repository.RoleRepository;
 import com.uniquelry.jgs.service.RoleService;
-import com.uniquelry.jgs.utils.StringUtils;
+import com.uniquelry.jgs.util.StringUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
