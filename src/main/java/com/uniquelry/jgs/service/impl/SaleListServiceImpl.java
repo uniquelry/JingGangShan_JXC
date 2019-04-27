@@ -35,16 +35,12 @@ public class SaleListServiceImpl implements SaleListService{
 
 	@Resource
 	private SaleListRepository saleListRepository;
-	
 	@Resource
 	private SaleListGoodsRepository saleListGoodsRepository;
-	
 	@Resource
 	private GoodsRepository goodsRepository;
-	
 	@Resource
 	private GoodsTypeRepository goodsTypeRepository;
-	
 	@Override
 	public String getTodayMaxSaleNumber() {
 		return saleListRepository.getTodayMaxSaleNumber();
@@ -121,7 +117,5 @@ public class SaleListServiceImpl implements SaleListService{
 	public List<Object> countSaleByMonth(String begin, String end) {
 		return saleListRepository.countSaleByMonth(begin, end);
 	}
-
-
 
 }

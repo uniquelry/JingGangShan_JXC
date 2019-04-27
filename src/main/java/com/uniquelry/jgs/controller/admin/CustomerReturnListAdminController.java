@@ -62,8 +62,6 @@ public class CustomerReturnListAdminController {
 	/**
 	 * 根据条件分页查询客户退货单信息
 	 * @param customerReturnList
-	 * @param page
-	 * @param rows
 	 * @return
 	 * @throws Exception
 	 */
@@ -96,8 +94,8 @@ public class CustomerReturnListAdminController {
 	
 	/**
 	 * 客户统计 获取客户退货单的所有商品信息
-	 * @param purchaseList
-	 * @param purchaseListGoods
+	 * @param customerReturnList
+	 * @param customerReturnListGoods
 	 * @return
 	 * @throws Exception
 	 */

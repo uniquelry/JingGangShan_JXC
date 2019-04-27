@@ -261,7 +261,8 @@ public class SaleListAdminController {
 			for(Object o:ll){
 				Object []oo=(Object[])o;
 				String dd=oo[2].toString().substring(0, 7);
-				if(dd.equals(data)){ // 存在
+				// 存在
+				if(dd.equals(data)){
 					sc.setAmountCost(MathUtils.format2Bit(Float.parseFloat(oo[0].toString())));
 					sc.setAmountSale(MathUtils.format2Bit(Float.parseFloat(oo[1].toString())));
 					sc.setAmountProfit(MathUtils.format2Bit(sc.getAmountSale()-sc.getAmountCost()));
